@@ -29,10 +29,8 @@ class Song
   end
 
   def self.find_by_name(name)
-    self.all.each do |location|
-      if location.name == name
-        return location
-      end
+    self.all.detect do |song|  
+      song.name == name
     end
   end
 
