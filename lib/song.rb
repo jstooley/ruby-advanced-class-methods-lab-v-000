@@ -29,9 +29,9 @@ class Song
   end
 
   def self.find_by_name(name)
-    self.all.each do |song_names|
+    self.all.collect do |song_names|
       if song_names == name
-        return song_names
+        found = song_names
       end
     end
   end
